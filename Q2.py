@@ -10,7 +10,7 @@ def afficher_jours_examens(horaire_examen: dict) -> list[str]:
     """
     for i in range(len(horaire_examen)):
         jours = []
-        date = datetime.datetime.strptime(horaire_examen[i], "%Y-%m-%d")
+        date = datetime.datetime.strptime(horaire_examen[i], "%Y-%m-%d","%H-%M")
         j = date.strftime("%a")
         jours.append(j)
         return jours
